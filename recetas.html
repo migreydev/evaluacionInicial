@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Paso a paso y recetario</title>
+
+    <style>
+      h1 {
+        color: rgb(153, 92, 51);
+        text-align: center;
+      }
+
+      h5{
+        color:rgb(226, 60, 60);
+      }
+
+      body {
+        background-color: rgb(255, 228, 196);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url(./beans-fondo.jpeg);
+      }
+
+      img {
+        width: 300px; 
+        height: 300px;
+        display: block;
+        margin:0 auto;
+      }
+
+      .padding {
+        background-color: #95694a;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        width: 100%;
+        height: 50%;
+        color: #95694a;
+      }
+
+      div{
+        background-color: #f3cfb6dc;
+        
+      }
+
+      footer{
+        background-color: #95694a;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        width: 100%;
+        height: 50%;
+        color: #95694a;
+      }
+
+      button {
+        border: 1px solid black;
+        padding: 12px 30px 12px 30px;
+        border-radius: 30px;
+        background-color: #fdceb6;
+        font-weight: bolder;
+        font-size: 15px;
+        box-shadow: 0px 0px 1px;
+        transform: all 2s esase;
+        transition-duration: .3s;
+      }
+
+      button:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 7px 1px rgb(0, 0, 0);
+        border: 1px solid black;
+      }
+
+      button:active {
+        transform: translateY(10px);
+        box-shadow: 0px 0px 1px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <h1>Paso a paso y recetario </h1>
+      <div align ="center" class="padding"></div>
+
+      <h3>Paso a paso para el uso de cafe de filtro</h3>
+      <ul>
+        <li>Seleccionar un dripper según preferencias.</li>
+        <ul>
+          <li>Disponemos de varios tipos de filtros de papel en base al dripper elegido</li>
+        </ul> 
+        <li>Definir la receta: cantidad de café, agua y tiempo de extracción.</li>
+        <li>Moler el café y colocarlo en el filtro.</li>
+        <li>Por ultimo, verter agua y seguir la receta. ¡A disfrutar!</li>
+
+        <br>
+        <img src="./pasos.jpeg">
+      </ul>
+      
+      <h3>Cuadro de recetas</h3>
+      <h5>¡En este recetario solo sera posible <b>asignar un id unico</b>, es decir si ya se encuentra uno en uso no podra volverse a utilizar!</h5>
+
+      <table border="1" id=tabla width="600" height="200">
+        <tr>
+          <td><b>Dripper</b></td>
+          <td><b>Molino</b></td>
+          <td><b>Ratio</b></td>
+          <td><b>Duracion</b></td>
+          <td><b>Id</b></td>
+        </tr>
+        <tr>
+          <td>V60</td>
+          <td>NICHE ZERO</td>
+          <td>1:11</td>
+          <td>3:30</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>KALITA</td>
+          <td>COMANDANTE C40</td>
+          <td>1:14</td>
+          <td>3:00</td>
+          <td>2</td>
+        </tr>
+      </table>
+      <br><br>
+
+      <button value="Añadir receta" onclick="anadir()">Añadir receta</button>
+      <button value="Borrar receta" onclick="borrar()">Borrar receta</button>
+      <script src="receta.js"></script>
+
+      <a href ="index.html">
+        <button>Regresar al menu</button>
+      </a>
+      <br><br>
+    <footer></footer>
+      <br>
+    </div>
+  </body>
+</html>
